@@ -5,4 +5,4 @@ function isLeapYear(year) {
 
 console.log(`2020년은 윤년인가요? === ${isLeapYear(2020)}`);
 console.log(`2009년은 윤년인가요? === ${isLeapYear(2009)}`);
-console.log(`년은 윤년인가요? === ${isLeapYear(1996)}`);
+console.log(`1996년은 윤년인가요? === ${isLeapYear(1996)}`);
