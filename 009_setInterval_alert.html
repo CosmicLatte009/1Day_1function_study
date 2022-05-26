@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="alert alert-danger" id="alert">
+        <span id="time">5</span>
+        초 이내 구매시 사은품 증정
+    </div>
+    <script>
+    //주어진 HTML코드를 가지고, 5초부터 1초까지 센 뒤에 알림창이 꺼지도록 만들어보시오
+
+    const alert = document.querySelector('#alert');
+    const time = document.querySelector('#time');
+
+    //setInterval은 첫번째 인자로 실행할 코드를 담고 있는 함수를 받고, 두번째 인자로 반복 주기를 밀리초(ms) 단위로 받는다.
+    let count = 5;
+    let timer = setInterval(()=> {
+        count--;
+        if(count >= 0) {
+            time.textContent = count;
+        }
+        else {
+            alert.style.display = "none";
+        }
+    },1000)
+    </script>
+</body>
+</html>
